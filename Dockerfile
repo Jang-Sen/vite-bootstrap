@@ -1,5 +1,5 @@
 # Node.js 이미지를 베이스로 사용
-FROM --platform=linux/amd64 node:20
+FROM node:22-alpine
 
 # 작업 디렉토리를 생성하고 설정
 WORKDIR /usr/src/app
