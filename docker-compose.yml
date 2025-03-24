@@ -1,0 +1,10 @@
+services:
+  vite-front-bootstrap:
+    container_name: vite-front-bootstrap-dev
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - "5171:5173"
