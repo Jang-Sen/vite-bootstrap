@@ -9,3 +9,11 @@ export interface ProductItem {
   category: string;
   productImg: string[];
 }
+
+export interface ProductInput {
+  name: string;
+  price: number;
+  description: string;
+  category: string;
+  productImg: string[];
+}
