@@ -4,6 +4,7 @@ import ProductList from '../pages/product/ProductList.tsx';
 import ProductDetail from '../pages/product/ProductDetail.tsx';
 import ErrorPage from '../pages/ErrorPage.tsx';
 import App from '../App.tsx';
+import CreateProduct from '../pages/product/CreateProduct.tsx';
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
       {
         path: '/product/:productId',
         element: <ProductDetail />,
+      },
+      {
+        path: '/product/create',
+        element: <CreateProduct />,
       },
     ],
   },
