@@ -1,4 +1,19 @@
 services:
+  vite-nginx:
+    container_name: vite-nginx-dev
+    image: nginx:stable-alpine
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/ssl:/etc/nginx/ssl
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - vite-front-bootstrap
+    networks:
+      - vite-dev-net
+
   vite-front-bootstrap:
     container_name: vite-front-bootstrap-dev
     build:
@@ -9,3 +24,9 @@ services:
       - /usr/src/app/node_modules
     ports:
       - "5171:5173"
+    networks:
+      - vite-dev-net
+
+networks:
+  vite-dev-net:
+    driver: bridge
