@@ -8,7 +8,8 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # 의존성 설치 후, npm 캐시 정리(불필요 파일 제거)
-RUN npm install && npm cache clean --force
+RUN npm install
+# npm cache clean --force
 
 # 소스 코드 복사
 COPY . .

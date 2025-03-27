@@ -1,10 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Main from '../pages/Main.tsx';
 import ProductList from '../pages/product/ProductList.tsx';
-import ProductDetail from '../pages/product/ProductDetail.tsx';
 import ErrorPage from '../pages/ErrorPage.tsx';
 import App from '../App.tsx';
-import CreateProduct from '../pages/product/CreateProduct.tsx';
+import ProductDetail from '../pages/product/ProductDetail.tsx';
 
 export const router = createBrowserRouter([
   {
@@ -26,7 +25,7 @@ export const router = createBrowserRouter([
       },
       {
         path: '/product/create',
-        element: <CreateProduct />,
+        // element: <CreateProduct />,
       },
     ],
   },
